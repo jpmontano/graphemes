@@ -5,7 +5,7 @@
 
 # Sample Output
 
->>> "wenesh"
+\>\>\> "wenesh"
 ["w", "e", "n", "e", "sh"]
 
 
