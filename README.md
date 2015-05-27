@@ -41,6 +41,9 @@
 
 >>> "wzhashkoons"
 ['w', 'zh', 'a', 'shk', 'oo', 'ns']
+
+>>> "aanjtoon"
+['aa', 'nj', 't', 'oo', 'n']
 ```
 
 
