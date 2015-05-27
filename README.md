@@ -7,7 +7,7 @@
 
 ```python
 >>> "nishnaabe"
-["n", "i", "s", "h", "n", "aa", "b", "e"]
+['n', 'i', 'sh', 'n', 'aa', 'b', 'e']
 
 >>> "boozhoo"
 ['b', 'oo', 'zh', 'oo']
