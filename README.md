@@ -3,7 +3,7 @@
 **Graphemes is a Python 3.4 program which program splits any Nishnaabe word (Pic River dialect) into its constituent graphemes.**
 
 
-# Sample Output
+## Sample Output
 
 ```python
 >>> "nishnaabe"
