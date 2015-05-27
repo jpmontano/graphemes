@@ -2,10 +2,10 @@
 
 
 def split_into_graphemes(nishchars):
-    '''This function splits a string of Nishnaabe characters into its
+    '''This function splits a Nishnaabe word into its
     respective constituent graphemes. It accepts a string of
     Nishnaabe characters (nishchars) and returns a list of
-    graphemes (alreadysplitgraphemes).'''
+    graphemes (collectedgraphemes).'''
 
     # List of possible single-letter-graphemes in Pic River's dialect
     # of the Nishnaabe language.
@@ -24,58 +24,67 @@ def split_into_graphemes(nishchars):
     trigraphs = [
         "nzh", "shk"]
 
-    # Convert the Nishnaabe word to all-lowercase
+    # Convert the Nishnaabe word, nishchars, to all-lowercase
     nishchars = nishchars.lower()
 
     # Prepare an empty list to store all of the graphemes of the
-    # Nishnaabe word nishcars.
+    # Nishnaabe word nishchars.
     collectedgraphemes = []
     
-    # Calculate teh length (in characters) of the Nishnaabe word
+    # Calculate the length (in characters) of the Nishnaabe word
     # which will be iterated through.
     numofnishchars = len(nishchars)
 
-    # Extend the length of the Nishnaabe word to prevent an
+    # Extend the length of Nishnaabe word nishchars to prevent an
     # "IndexError: string index out of range"
-    # when we iterate past the last character of the Nishnaabe word,
-    # nishchars, in our while-loop. The length of this string being
-    # added to nishchars needs to be one character shorter than the
-    # length of the longest potential grapheme.
-    nishchars += "  "
+    # when we iterate past the last character of the Nishnaabe word in
+    # our while-loop. This nonsense string needs to have a length at
+    # least as large as one character shorter than the length of the
+    # longest possible grapheme. (Since the longest possible grapheme is
+    # currently three characters, we add one less than three characters
+    # to the end of nishchars.) The characters which make up this
+    # nonsense string need to be characters which are not possible
+    # occurrences within the Nishnaabe orthography of Pic River's dialect.
+    nishchars += "qq"
 
     # Initialize our counter with which we'll iterate through the
     # characters of the Nishnaabe word nishchars.
     i = 0
 
-    # Iterate through the Nishnaabe expression (i.e., the string
-    # of Nishnaabe characters named nishcars) in order to split
-    # it into the graphemes of which nishcars consists.
+    # Iterate through the Nishnaabe word, nishchars, in order to split
+    # it into the graphemes of which nishchars consists.
     while (i < numofnishchars):
         
-        # From the current counter/pointer with which we're interating
-        # through nishcars, create three quick and convenient strings
+        # From the current counter, i, with which we're interating
+        # through nishchars, we create three quick and convenient strings
         # with which to do some querying in the upcoming lines of code.
         queried1char = nishchars[i]
         queried2chars = nishchars[i] + nishchars[i + 1]
         queried3chars = nishchars[i] + nishchars[i + 1] + nishchars[i + 2]
 
         # Query the list of possible Nishnaabe three-letter-graphemes for
-        # the existence of the current three characters from the
-        # Nishnaabe word nishchars.
+        # the existence of the currently-pointed-to three-character-sequence
+        # within the Nishnaabe word nishchars. If the three-character-
+        # sequence is found in the trigraphs list, then we add that
+        # three-character-sequence to our collectedgraphemes list.
         if queried3chars in trigraphs:
             collectedgraphemes.append(queried3chars)
             i += 3
         
         # Query the list of possible Nishnaabe two-letter-graphemes for
-        # the existence of the current two characters from the
-        # Nishnaabe word nishchars.
+        # the existence of the currently-pointed-to two-character-sequence
+        # within the Nishnaabe word nishchars. If the two-character-
+        # sequence is found in the digraphs list, then we add that
+        # two-character-sequence to our collectedgraphemes list.
         elif queried2chars in digraphs:
             collectedgraphemes.append(queried2chars)
             i += 2
         
         # Query the list of possible Nishnaabe one-letter-graphemes for
-        # the existence of the current one character from the
-        # Nishnaabe word nishchars.
+        # the existence of the currently-pointed-to one-character-sequence
+        # within the Nishnaabe word nishchars. If the one-character-
+        # sequence is found in the singlechargraphemes list, then we add
+        # that one-character-sequence to our collectedgraphemes list.
         elif queried1char in singlechargraphemes:
             collectedgraphemes.append(queried1char)
             i += 1
@@ -89,16 +98,18 @@ def split_into_graphemes(nishchars):
             print('in the word: "' + nishchars)
             break
     
-    # Return the constituent split-up graphemes of the Nishnaabe word
-    # nishchars.
+    # Return, as list collectedgraphemes, the constituent split-up
+    # graphemes of the Nishnaabe word nishchars.
     return collectedgraphemes
 
 
 
 
+##############################
 # Begin main processing loop.
-#
-# A sample list of Nishnaabe expressions to split into graphemes
+##############################
+
+# A sample list of Nishnaabe words to split into graphemes
 nishsamples = [
     "nishnaabe",
     "boozhoo",
@@ -114,8 +125,7 @@ nishsamples = [
     "wzhashkoons"
 ]
 
-# Iterate through the sample list of Nishnaabe expressions and split each
-# of them into its respective constituent graphemes.
+# Iterate through the sample list of Nishnaabe words and split each
+# Nishnaabe word into its respective constituent graphemes.
 for nishsample in nishsamples:
     print(split_into_graphemes(nishsample))
-
