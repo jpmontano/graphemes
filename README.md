@@ -48,5 +48,4 @@
 ## Current project member:
 
 John Paul Montano
-[https://github.com/jpmontano](https://github.com/jpmontano)
 [http://jpmontano.com](http://jpmontano.com)
