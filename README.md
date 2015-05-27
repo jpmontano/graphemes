@@ -5,9 +5,10 @@
 
 # Sample Output
 
-\>\>\> "wenesh"\n
+```python
+>>> "wenesh"
 ["w", "e", "n", "e", "sh"]
-
+```
 
 
 
