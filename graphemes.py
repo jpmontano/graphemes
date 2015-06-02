@@ -55,7 +55,7 @@ def split_into_graphemes(nishchars):
     # it into the graphemes of which nishchars consists.
     while (i < numofnishchars):
         
-        # From the current counter, i, with which we're interating
+        # From the current counter, i, with which we're iterating
         # through nishchars, we create three quick and convenient strings
         # with which to do some querying in the upcoming lines of code.
         queried1char = nishchars[i]
