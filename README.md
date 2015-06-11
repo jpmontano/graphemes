@@ -44,6 +44,15 @@
 
 >>> "aanjtoon"
 ['aa', 'nj', 't', 'oo', 'n']
+
+>>> "kiwenzii"
+['k', 'i', 'w', 'e', 'nz', 'ii']
+
+>>> aanzkon'ye
+['aa', 'nz', 'k', 'o', 'n', "'", 'y', 'e']
+
+>>> giigoonyke
+['g', 'ii', 'g', 'oo', 'ny', 'k', 'e']
 ```
 
 
