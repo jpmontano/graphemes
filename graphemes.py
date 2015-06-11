@@ -10,13 +10,13 @@ def split_into_graphemes(nishchars):
     # List of possible single-letter-graphemes in Pic River's dialect
     # of the Nishnaabe language.
     singlechargraphemes = [
-        "-", "'", "a", "b", "d", "e", "g", "h", "i", "j", "k",
-        "l", "m", "n", "o", "p", "s", "t", "w", "y", "z"]
+        "-", "'", "a", "b", "d", "e", "g", "h", "i", "j", "k", "l",
+        "m", "n", "o", "p", "s", "t", "w", "y", "z"]
 
     # List of possible two-letter-graphemes in Pic River's dialect
     # of the Nishnaabe language.
     digraphs = [
-        "aa", "ch", "ii", "nd", "ng", "nh", "nj", "ns", "ny",
+        "aa", "ch", "ii", "nd", "ng", "nh", "nj", "ns", "ny", "nz",
         "oo", "sh", "sk", "zh"]
 
     # List of possible three-letter-graphemes in Pic River's dialect
@@ -123,7 +123,10 @@ nishsamples = [
     "gzaaghin",
     "wzhashk",
     "wzhashkoons",
-    "aanjtoon"
+    "aanjtoon",
+    "kiwenzii",
+    "aanzkon'ye",
+    "giigoonyke"
 ]
 
 # Iterate through the sample list of Nishnaabe words and split each
