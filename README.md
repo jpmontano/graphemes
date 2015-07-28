@@ -53,6 +53,9 @@
 
 >>> giigoonyke
 ['g', 'ii', 'g', 'oo', 'ny', 'k', 'e']
+
+>>> wmbaasin
+['w', 'mb', 'aa', 's', 'i', 'n']
 ```
 
 
