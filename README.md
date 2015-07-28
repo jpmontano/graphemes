@@ -48,13 +48,13 @@
 >>> "kiwenzii"
 ['k', 'i', 'w', 'e', 'nz', 'ii']
 
->>> aanzkon'ye
+>>> "aanzkon'ye"
 ['aa', 'nz', 'k', 'o', 'n', "'", 'y', 'e']
 
->>> giigoonyke
+>>> "giigoonyke"
 ['g', 'ii', 'g', 'oo', 'ny', 'k', 'e']
 
->>> wmbaasin
+>>> "wmbaasin"
 ['w', 'mb', 'aa', 's', 'i', 'n']
 ```
 
