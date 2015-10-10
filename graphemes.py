@@ -2,16 +2,16 @@
 
 # Disregarding carons (ǧ, ȟ and ǩ), these are all of the Nishnaabe
 # graphemes:
-# - ' a aa b ch d e g h i ii j k
-# m mb n nd ng nh nj ns ny nz nzh
-# o oo p s sh shk sht sk t w y z zh
+# - ' a aa b ch d e g h i ii j k m mb
+# n nd ng nh nj ns ny nz nzh o oo p
+# s sh shk shp sht sk sp t w y z zh
 #
 #
 # Including carons (ǧ, ȟ and ǩ), these are all of the Nishnaabe
 # graphemes:
-# - ' a aa b ch cȟ d e g ǧ h ȟ i ii j k ǩ
-# m mb n nd ng nǧ nh nȟ nj ns ny nz nzh nzȟ
-# o oo p s sh sȟ shk shǩ sht sk sǩ t w y z zh zȟ
+# - ' a aa b ch cȟ d e g ǧ h ȟ i ii j k ǩ m mb
+# n nd ng nǧ nh nȟ nj ns ny nz nzh nzȟ o oo p
+# s sh sȟ shk shǩ shp sht sk sp sǩ t w y z zh zȟ
 
 
 def split_into_graphemes(nishchars):
@@ -30,12 +30,12 @@ def split_into_graphemes(nishchars):
     # of the Nishnaabe language.
     digraphs = [
         "aa", "ch", "cȟ", "ii", "mb", "nd", "ng", "nǧ", "nh", "nȟ", "nj",
-        "ns", "ny", "nz", "oo", "sh", "sȟ", "sk", "sǩ", "zh", "zȟ"]
+        "ns", "ny", "nz", "oo", "sh", "sȟ", "sk", "sǩ", "sp", "zh", "zȟ"]
 
     # List of possible three-letter-graphemes in Pic River's dialect
     # of the Nishnaabe language.
     trigraphs = [
-        "nzh", "nzȟ", "shk", "shǩ", "sht"]
+        "nzh", "nzȟ", "shk", "shǩ", "shp", "sht"]
 
     # Convert the Nishnaabe word, nishchars, to all-lowercase
     nishchars = nishchars.lower()
@@ -146,7 +146,10 @@ nishsamples = [
     "n'zikweȟdizo",
     "benǧzheȟdizo",
     "n'shtigwaan",
-    "gziibiigshtigwaanedog"
+    "gziibiigshtigwaanedog",
+    "niishtna",
+    "spogin",
+    "shpiming"
 ]
 
 # Iterate through the sample list of Nishnaabe words and split each
