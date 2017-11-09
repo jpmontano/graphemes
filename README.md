@@ -1,6 +1,6 @@
 # Graphemes
 
-**Graphemes is a Python 3.4 program which splits a Nishnaabe word (Pic River dialect) into its constituent graphemes.**
+**Graphemes is a Python 3.5 program which splits a Nishnaabe word (Biigtigong dialect) into its constituent graphemes.**
 
 
 ## Sample Output

@@ -1,4 +1,4 @@
-#!/opt/local/bin/python3.4 -tt
+#!/opt/local/bin/python3.5 -tt
 
 # Disregarding carons (ǧ, ȟ and ǩ), these are all of the Nishnaabe
 # graphemes:
@@ -9,9 +9,9 @@
 #
 # Including carons (ǧ, ȟ and ǩ), these are all of the Nishnaabe
 # graphemes:
-# - ' a aa b ch cȟ d e g ǧ h ȟ i ii j k ǩ m mb
-# n nd ng nǧ nh nȟ nj ns ny nz nzh nzȟ o oo p
-# s sh sȟ shk shǩ shp sht sk sp sǩ t w y z zh zȟ
+# - ' a aa b ch d e g ǧ h ȟ i ii j k ǩ m mb
+# n nd ng nǧ nh nj ns ny nz nzh o oo p
+# s sh shk shǩ shp sht sk sp sǩ t w y z zh
 
 
 def split_into_graphemes(nishchars):
@@ -20,22 +20,22 @@ def split_into_graphemes(nishchars):
     Nishnaabe characters (nishchars) and returns a list of
     graphemes (collectedgraphemes).'''
 
-    # List of possible single-letter-graphemes in Pic River's dialect
+    # List of possible single-letter-graphemes in Biigtigong's dialect
     # of the Nishnaabe language.
     singlechargraphemes = [
-        "-", "'", "a", "b", "d", "e", "g", "ǧ", "h", "ȟ", "i", "j", "k",
-        "ǩ",  "l", "m", "n", "o", "p", "s", "t", "w", "y", "z"]
+        "-", "'", "a", "b", "d", "e", "g", "ǧ", "h", "ȟ", "i", "j",
+        "k", "ǩ",  "l", "m", "n", "o", "p", "s", "t", "w", "y", "z"]
 
-    # List of possible two-letter-graphemes in Pic River's dialect
+    # List of possible two-letter-graphemes in Biigtigong's dialect
     # of the Nishnaabe language.
     digraphs = [
-        "aa", "ch", "cȟ", "ii", "mb", "nd", "ng", "nǧ", "nh", "nȟ", "nj",
-        "ns", "ny", "nz", "oo", "sh", "sȟ", "sk", "sǩ", "sp", "zh", "zȟ"]
+        "aa", "ch", "ii", "mb", "nd", "ng", "nǧ", "nh", "nj",
+        "ns", "ny", "nz", "oo", "sh", "sk", "sǩ", "sp", "zh"]
 
-    # List of possible three-letter-graphemes in Pic River's dialect
+    # List of possible three-letter-graphemes in Biigtigong's dialect
     # of the Nishnaabe language.
     trigraphs = [
-        "nzh", "nzȟ", "shk", "shǩ", "shp", "sht"]
+        "nzh", "shk", "shǩ", "shp", "sht"]
 
     # Convert the Nishnaabe word, nishchars, to all-lowercase
     nishchars = nishchars.lower()
@@ -57,7 +57,7 @@ def split_into_graphemes(nishchars):
     # currently three characters, we add one less than three characters
     # to the end of nishchars.) The characters which make up this
     # nonsense string need to be characters which are not possible
-    # occurrences within the Nishnaabe orthography of Pic River's dialect.
+    # occurrences within the Nishnaabe orthography of Biigtigong's dialect.
     nishchars += "qq"
 
     # Initialize our counter with which we'll iterate through the
